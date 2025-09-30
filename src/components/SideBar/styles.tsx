@@ -9,11 +9,10 @@ interface SidebarContainerProps {
 export const SidebarContainer = styled.div<SidebarContainerProps>`
   display: flex;
   flex-direction: column;
-  min-width: ${({ isOpen }) => (isOpen ? "60px" : "200px")};
-  max-width: ${({ isOpen }) => (isOpen ? "60px" : "300px")};
-  width: ${({ isOpen }) => (isOpen ? "60px" : "250px")};
+  min-width: ${({ isOpen }) => (isOpen ? "200px" : "60px")};
+  max-width: ${({ isOpen }) => (isOpen ? "300px" : "60px")};
+  width: ${({ isOpen }) => (isOpen ? "250px" : "60px")};
   background-color: ${theme.colors.primary};
   color: ${theme.colors.light};
   transition: width 0.3s ease;
-  overflow: hidden;
 `;

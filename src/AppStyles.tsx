@@ -17,4 +17,5 @@ export const ContentWindow = styled.div<ContentWindowProps>`
 export const LayOutContainer = styled.div`
   display: flex;
   height: 100vh;
+  width: 100%;
 `;
