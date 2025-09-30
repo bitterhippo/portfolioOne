@@ -1,21 +1,15 @@
 import styled from "styled-components";
 import { theme } from "../Theme";
+import type { ThemeColors } from "./types";
 
-type ThemeColors =
-  | "background"
-  | "primary"
-  | "secondary"
-  | "light"
-  | "gray"
-  | "textPrimary"
-  | "textSecondary"
-  | "link"
-  | "linkHover";
-
-interface ButtonProps {
+export interface StyledButtonProps {
   color: ThemeColors;
 }
 
-export const ButtonStyle = styled.button<ButtonProps>`
-  color: ${({ color }) => theme.colors[color]};
+export const StyledButton = styled.button<StyledButtonProps>`
+  position: absolute;
+  bottom: ${theme.spacing.sm};
+  right: -12px;
+  padding: 4px 8px;
+  cursor: pointer;
 `;

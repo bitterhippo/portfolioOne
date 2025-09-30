@@ -15,4 +15,5 @@ export const SidebarContainer = styled.div<SidebarContainerProps>`
   background-color: ${theme.colors.primary};
   color: ${theme.colors.light};
   transition: width 0.3s ease;
+  border-right: 2px solid ${theme.colors.background};
 `;

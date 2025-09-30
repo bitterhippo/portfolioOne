@@ -1,10 +1,10 @@
+import { StyledButton } from "./styles";
 import type { ButtonProps } from "./types";
-import { ButtonStyle } from "./styles";
 
 export const Button = ({ color }: ButtonProps) => {
   return (
-    <ButtonStyle color={color}>
+    <StyledButton color={"gray"}>
       <>lol</>
-    </ButtonStyle>
+    </StyledButton>
   );
 };

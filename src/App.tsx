@@ -10,9 +10,6 @@ export default function App() {
   return (
     <LayOutContainer>
       <SideBar isMobile={false} isOpen={isSideBarOpen} />
-      <div style={{ width: "200px", backgroundColor: "tomato" }}>
-        PROPER SKUX
-      </div>
       <ContentWindow isSideBarOpen={isSideBarOpen} isPrimary={true}>
         <Routes>
           <Route path="/" element={<Home />} />
