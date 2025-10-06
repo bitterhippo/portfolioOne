@@ -7,6 +7,10 @@ import Home from "./pages/Home";
 export default function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
+  const buttonHandler = () => {
+    setIsSideBarOpen((prev) => !prev);
+  };
+
   return (
     <LayOutContainer>
       <SideBar isMobile={false} isOpen={isSideBarOpen} />

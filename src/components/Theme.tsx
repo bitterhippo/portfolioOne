@@ -1,18 +1,36 @@
 export const theme = {
   colors: {
-    background: "#050517", // Dark base background
-    primary: "#CF5C36", // Buttons, highlights
-    secondary: "#EFC88B", // Secondary highlights, subtle accents
-    light: "#F4E3B2", // Light card backgrounds, text on dark bg
-    gray: "#D3D5D7", // Borders, muted text, subtle UI
-    textPrimary: "#F4E3B2", // Main text color on dark bg
-    textSecondary: "#D3D5D7", // Secondary text
-    link: "#CF5C36", // Links / interactive elements
-    linkHover: "#C04828", // Hover state for links/buttons
+    background: "#050517",
+    primary: "#CF5C36",
+    secondary: "#EFC88B",
+    light: "#F4E3B2",
+    gray: "#D3D5D7",
+    textPrimary: "#F4E3B2",
+    textSecondary: "#D3D5D7",
+    link: "#CF5C36",
+    linkHover: "#C04828",
   },
   fonts: {
     heading: `'Inter', sans-serif`,
     body: `'Roboto', sans-serif`,
+  },
+  fontSizes: {
+    xs: "12px",
+    sm: "14px",
+    md: "16px",
+    lg: "20px",
+    xl: "24px",
+    "2xl": "32px",
+  },
+  fontWeights: {
+    regular: 400,
+    medium: 500,
+    bold: 700,
+  },
+  lineHeights: {
+    tight: 1.2,
+    normal: 1.5,
+    relaxed: 1.75,
   },
   spacing: {
     xs: "4px",
@@ -25,5 +43,28 @@ export const theme = {
     sm: "4px",
     md: "8px",
     lg: "12px",
+  },
+  typography: {
+    h1: {
+      fontFamily: `'Inter', sans-serif`,
+      fontSize: "32px",
+      fontWeight: 700,
+      lineHeight: 1.2,
+      color: "#F4E3B2",
+    },
+    h2: {
+      fontFamily: `'Inter', sans-serif`,
+      fontSize: "24px",
+      fontWeight: 600,
+      lineHeight: 1.3,
+      color: "#F4E3B2",
+    },
+    body: {
+      fontFamily: `'Roboto', sans-serif`,
+      fontSize: "16px",
+      fontWeight: 400,
+      lineHeight: 1.5,
+      color: "#D3D5D7",
+    },
   },
 };

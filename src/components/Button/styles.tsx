@@ -10,6 +10,6 @@ export const StyledButton = styled.button<StyledButtonProps>`
   position: absolute;
   bottom: ${theme.spacing.sm};
   right: -12px;
-  padding: 4px 8px;
+  padding: ${theme.spacing.xs} ${theme.spacing.sm};
   cursor: pointer;
 `;
