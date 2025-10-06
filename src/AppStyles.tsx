@@ -8,7 +8,8 @@ interface ContentWindowProps {
 
 export const ContentWindow = styled.div<ContentWindowProps>`
   flex: ${({ isSideBarOpen }) => (isSideBarOpen ? 9 : 7)};
-  background-color: ${({ isPrimary }) => (isPrimary ? "#CF5C36" : "#D3D5D7")};
+  background-color: ${({ isPrimary, theme }) =>
+    isPrimary ? theme.colors.light : theme.colors.background};
   color: ${({ isPrimary }) => (isPrimary ? "#F4E3B2" : "#050517")};
   padding: ${theme.spacing.md};
   transition: flex 0.3s ease;

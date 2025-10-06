@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { SideBar } from "./components/SideBar/SideBar";
 import { ContentWindow, LayOutContainer } from "./AppStyles";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 
 export default function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);

@@ -13,7 +13,7 @@ export const SidebarContainer = styled.div<SidebarContainerProps>`
   max-width: ${({ isOpen }) => (isOpen ? "300px" : "60px")};
   width: ${({ isOpen }) => (isOpen ? "250px" : "60px")};
   background-color: ${theme.colors.primary};
-  color: ${theme.colors.light};
+  color: ${theme.colors.background};
   transition: width 0.3s ease;
   border-right: 2px solid ${theme.colors.background};
 `;
