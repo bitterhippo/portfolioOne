@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../Theme";
+import { Link } from "react-router-dom";
 
 interface SidebarContainerProps {
   isOpen: boolean;
@@ -9,6 +10,7 @@ interface SidebarContainerProps {
 export const SidebarContainer = styled.div<SidebarContainerProps>`
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-width: ${({ isOpen }) => (isOpen ? "200px" : "60px")};
   max-width: ${({ isOpen }) => (isOpen ? "300px" : "60px")};
   width: ${({ isOpen }) => (isOpen ? "250px" : "60px")};
@@ -16,4 +18,17 @@ export const SidebarContainer = styled.div<SidebarContainerProps>`
   color: ${theme.colors.background};
   transition: width 0.3s ease;
   border-right: 2px solid ${theme.colors.background};
+  align-items: center;
+  justify-content: center;
+  gap: ${theme.spacing.md};
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.background};
+  font-weight: 600;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.textPrimary};
+  }
 `;
