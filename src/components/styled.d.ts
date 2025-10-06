@@ -24,5 +24,28 @@ declare module "styled-components" {
       lg: string;
       xl: string;
     };
+    typography: {
+      h1: {
+        fontFamily: string;
+        fontSize: string;
+        fontWeight: number;
+        lineHeight: number;
+        color: string;
+      };
+      h2: {
+        fontFamily: string;
+        fontSize: string;
+        fontWeight: number;
+        lineHeight: number;
+        color: string;
+      };
+      body: {
+        fontFamily: string;
+        fontSize: string;
+        fontWeight: number;
+        lineHeight: number;
+        color: string;
+      };
+    };
   }
 }

@@ -26,7 +26,11 @@ export const SidebarContainer = styled.div<SidebarContainerProps>`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.background};
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.typography.body.fontFamily};
+  font-size: ${({ theme }) => theme.typography.body.fontSize};
+  line-height: ${({ theme }) => theme.typography.body.lineHeight};
+  font-weight: ${({ theme }) => theme.typography.body.fontWeight};
+  border-radius: ${theme.borderRadius.sm};
 
   &:hover {
     color: ${({ theme }) => theme.colors.textPrimary};
