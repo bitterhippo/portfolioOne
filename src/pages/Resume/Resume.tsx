@@ -1,9 +1,10 @@
-import { PageContentWrapper, BannerImage } from "../styles";
+import { PageContentWrapper, Banner, PageTextWrapper } from "../styles";
 
 export default function Resume() {
   return (
     <PageContentWrapper>
-      <BannerImage />
+      <Banner />
+      <PageTextWrapper>Resume</PageTextWrapper>
     </PageContentWrapper>
   );
 }

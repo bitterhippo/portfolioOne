@@ -1,9 +1,10 @@
-import { PageContentWrapper, BannerImage } from "../styles";
+import { PageContentWrapper, Banner, PageTextWrapper } from "../styles";
 
 export default function About() {
   return (
     <PageContentWrapper>
-      <BannerImage />
+      <Banner />
+      <PageTextWrapper>Abouty!</PageTextWrapper>
     </PageContentWrapper>
   );
 }

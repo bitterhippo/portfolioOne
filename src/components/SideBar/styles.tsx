@@ -59,9 +59,3 @@ export const ToggleButtonContainer = styled.button<{ isOpen: boolean }>`
   align-items: center;
   justify-content: center;
 `;
-
-export const BannerImage = styled.img`
-  height: 25vh;
-  width: 100%;
-  object-fit: cover;
-`;
