@@ -7,7 +7,8 @@ interface SidebarContainerProps {
   isMobile: boolean;
 }
 
-export const SidebarContainer = styled.div<SidebarContainerProps>`
+export const SidebarContainer = styled.nav<SidebarContainerProps>`
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -35,4 +36,20 @@ export const StyledLink = styled(Link)`
   &:hover {
     color: ${({ theme }) => theme.colors.textPrimary};
   }
+`;
+
+export const ToggleButtonContainer = styled.button<{ isOpen: boolean }>`
+  position: absolute;
+  top: 50%;
+  right: ${({ isOpen }) =>
+    isOpen ? "-40px" : "-40px"}; /* consistent offset */
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 0 20% 20% 0;
+  background-color: ${({ theme }) => theme.colors.gray};
+  border: 2px solid ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.background};
+  cursor: pointer;
+  transition: all 0.3s ease;
 `;
