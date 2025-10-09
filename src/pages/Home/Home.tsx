@@ -1,10 +1,12 @@
 import { PageContentWrapper, Banner, PageTextWrapper } from "../styles";
-import { Daigoro1 } from "../../assets/images";
+import { DaigoroTile } from "../../assets/images";
 
 export default function Home() {
   return (
     <PageContentWrapper>
-      <Banner image={Daigoro1} />
+      <Banner image={DaigoroTile}>
+        <span>Home</span>
+      </Banner>
       <PageTextWrapper>Home</PageTextWrapper>
     </PageContentWrapper>
   );

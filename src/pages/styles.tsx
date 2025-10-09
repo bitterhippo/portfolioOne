@@ -11,30 +11,37 @@ export const PageContentWrapper = styled.div`
 export const Banner = styled.div<{ image: string }>`
   height: 30vh;
   background-image: url(${({ image }) => image});
-  background-size: cover;
+  background-size: auto 100%; /* keeps vertical fill */
+  background-repeat: repeat; /* horizontal tiling */
   background-position: center;
-  background-repeat: no-repeat;
   position: relative;
   display: flex;
-  align-items: flex-end; /* or center */
-  padding: 1rem;
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
   color: ${({ theme }) => theme.colors.background};
   font-size: 2rem;
   font-weight: bold;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.background};
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
 
   &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* overlay for text contrast */
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
   }
 
   span {
     position: relative;
     z-index: 1;
+    text-align: center;
+    color: ${theme.colors.gray};
+    font-size: calc(5 * ${theme.fontSizes.lg});
+    font-family: "Inter", sans-serif;
   }
 `;
 
 export const PageTextWrapper = styled.div`
-  margin: ${theme.spacing.md};
+  margin: ${theme.spacing.lg} calc(2 * ${theme.spacing.lg});
 `;

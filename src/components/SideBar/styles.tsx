@@ -12,9 +12,9 @@ export const SidebarContainer = styled.nav<SidebarContainerProps>`
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-width: ${({ isOpen }) => (isOpen ? "200px" : "60px")};
-  max-width: ${({ isOpen }) => (isOpen ? "300px" : "60px")};
-  width: ${({ isOpen }) => (isOpen ? "250px" : "60px")};
+  min-width: ${({ isOpen }) => (isOpen ? "200px" : "80px")};
+  max-width: ${({ isOpen }) => (isOpen ? "200px" : "80px")};
+  width: ${({ isOpen }) => (isOpen ? "250px" : "80px")};
   background-color: ${theme.colors.primary};
   color: ${theme.colors.background};
   transition: width 0.3s ease;
