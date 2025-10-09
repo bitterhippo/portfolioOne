@@ -12,13 +12,17 @@ import Projects from "./pages/Projects/Projects";
 export default function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
-  const buttonHandler = () => {
+  const toggleSideBar = () => {
     setIsSideBarOpen((prev) => !prev);
   };
 
   return (
     <LayOutContainer>
-      <SideBar isMobile={false} isOpen={isSideBarOpen} />
+      <SideBar
+        isMobile={false}
+        isOpen={isSideBarOpen}
+        sideBarHandler={toggleSideBar}
+      />
       <ContentWindow isSideBarOpen={isSideBarOpen} isPrimary={true}>
         <Routes>
           <Route path="/" element={<Home />} />

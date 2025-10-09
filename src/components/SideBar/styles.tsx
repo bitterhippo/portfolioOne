@@ -41,8 +41,7 @@ export const StyledLink = styled(Link)`
 export const ToggleButtonContainer = styled.button<{ isOpen: boolean }>`
   position: absolute;
   top: 50%;
-  right: ${({ isOpen }) =>
-    isOpen ? "-40px" : "-40px"}; /* consistent offset */
+  right: ${({ isOpen }) => (isOpen ? "-40px" : "-40px")};
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
@@ -52,4 +51,7 @@ export const ToggleButtonContainer = styled.button<{ isOpen: boolean }>`
   color: ${({ theme }) => theme.colors.background};
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
