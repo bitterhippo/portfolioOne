@@ -1,3 +1,5 @@
+import { PageContentWrapper } from "../styles";
+
 export default function Projects() {
-  return <> Projects </>;
+  return <PageContentWrapper> Projects </PageContentWrapper>;
 }

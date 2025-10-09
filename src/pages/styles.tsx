@@ -1,7 +1,7 @@
-import { theme } from "../../components/Theme";
+import { theme } from "../components/Theme";
 import styled from "styled-components";
 
-export const HomeWrapper = styled.div`
+export const PageContentWrapper = styled.div`
   background: ${theme.colors.light};
   color: ${theme.colors.background};
   height: 100%;

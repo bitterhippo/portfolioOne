@@ -1,5 +1,5 @@
-import { HomeWrapper } from "./styles";
+import { PageContentWrapper } from "../styles";
 
 export default function Home() {
-  return <HomeWrapper>Home</HomeWrapper>;
+  return <PageContentWrapper>Home</PageContentWrapper>;
 }
