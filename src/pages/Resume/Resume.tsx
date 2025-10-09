@@ -1,9 +1,10 @@
 import { PageContentWrapper, Banner, PageTextWrapper } from "../styles";
+import { Daigoro3 } from "../../assets/images";
 
 export default function Resume() {
   return (
     <PageContentWrapper>
-      <Banner />
+      <Banner image={Daigoro3} />
       <PageTextWrapper>Resume</PageTextWrapper>
     </PageContentWrapper>
   );
