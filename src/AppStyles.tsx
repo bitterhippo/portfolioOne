@@ -11,7 +11,6 @@ export const ContentWindow = styled.div<ContentWindowProps>`
   background-color: ${({ isPrimary, theme }) =>
     isPrimary ? theme.colors.light : theme.colors.background};
   color: ${({ isPrimary }) => (isPrimary ? "#F4E3B2" : "#050517")};
-  padding: ${theme.spacing.md};
   transition: flex 0.3s ease;
 `;
 

@@ -7,3 +7,9 @@ export const PageContentWrapper = styled.div`
   height: 100%;
   width: 100%;
 `;
+
+export const BannerImage = styled.img`
+  height: 25vh;
+  width: 100%;
+  object-fit: cover;
+`;

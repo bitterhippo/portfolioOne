@@ -7,7 +7,11 @@ export default function ToggleButton({
   sideBarHandler,
 }: ToggleButtonProps) {
   return (
-    <ToggleButtonContainer isOpen={isSideBarExpanded} onClick={sideBarHandler}>
+    <ToggleButtonContainer
+      isOpen={isSideBarExpanded}
+      onClick={sideBarHandler}
+      aria-pressed={isSideBarExpanded}
+    >
       {isSideBarExpanded ? <Maximize /> : <Minimize />}
     </ToggleButtonContainer>
   );

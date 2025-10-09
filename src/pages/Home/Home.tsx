@@ -1,5 +1,9 @@
-import { PageContentWrapper } from "../styles";
+import { PageContentWrapper, BannerImage } from "../styles";
 
 export default function Home() {
-  return <PageContentWrapper>Home</PageContentWrapper>;
+  return (
+    <PageContentWrapper>
+      <BannerImage />
+    </PageContentWrapper>
+  );
 }

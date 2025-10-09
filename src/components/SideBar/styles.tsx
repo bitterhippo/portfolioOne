@@ -22,6 +22,7 @@ export const SidebarContainer = styled.nav<SidebarContainerProps>`
   align-items: center;
   justify-content: center;
   gap: ${theme.spacing.md};
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
 `;
 
 export const StyledLink = styled(Link)`
@@ -35,16 +36,19 @@ export const StyledLink = styled(Link)`
 
   &:hover {
     color: ${({ theme }) => theme.colors.textPrimary};
+    text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme.colors.textPrimary};
+    text-underline-offset: 3px;
   }
 `;
 
 export const ToggleButtonContainer = styled.button<{ isOpen: boolean }>`
   position: absolute;
   top: 50%;
-  right: ${({ isOpen }) => (isOpen ? "-40px" : "-40px")};
+  right: ${({ isOpen }) => (isOpen ? "-30px" : "-30px")};
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 0 20% 20% 0;
   background-color: ${({ theme }) => theme.colors.gray};
   border: 2px solid ${({ theme }) => theme.colors.background};
@@ -54,4 +58,10 @@ export const ToggleButtonContainer = styled.button<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const BannerImage = styled.img`
+  height: 25vh;
+  width: 100%;
+  object-fit: cover;
 `;
