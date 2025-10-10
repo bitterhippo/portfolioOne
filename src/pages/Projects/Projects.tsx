@@ -6,8 +6,10 @@ import {
   StyledH1,
   StyledH2,
   StyledBody,
+  ProjectSelectorWrapper,
+  ProjectSelectorContentBox,
 } from "../styles";
-import CommitList from "../../components/CommitList/CommitList";
+import { CommitList, Dropdown } from "../../components";
 
 export default function Projects() {
   return (
@@ -23,6 +25,24 @@ export default function Projects() {
           Select a project from the dropdown below and information relating to
           that project will be displayed.
         </StyledBody>
+        <ProjectSelectorWrapper>
+          <Dropdown
+            items={[
+              "this",
+              "is",
+              "a",
+              "test",
+              "this",
+              "is",
+              "a",
+              "showdown",
+              "a",
+              "throwdown",
+            ]}
+          />
+          {/* TODO - this could easily just be absorbed by the dropdown */}
+          <ProjectSelectorContentBox />
+        </ProjectSelectorWrapper>
       </PageTextWrapper>
     </PageContentWrapper>
   );

@@ -1,5 +1,5 @@
 import { CommitListContainer } from "./styles";
 
-export default function CommitList() {
+export const CommitList = () => {
   return <CommitListContainer>LOL</CommitListContainer>;
-}
+};
