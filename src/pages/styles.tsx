@@ -45,3 +45,27 @@ export const Banner = styled.div<{ image: string }>`
 export const PageTextWrapper = styled.div`
   margin: ${theme.spacing.lg} calc(2 * ${theme.spacing.lg});
 `;
+
+export const StyledH1 = styled.h1`
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #f4e3b2;
+`;
+
+export const StyledH2 = styled.h2`
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #f4e3b2;
+`;
+
+export const StyledBody = styled.p`
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #d3d5d7;
+`;
