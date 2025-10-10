@@ -28,16 +28,8 @@ export default function Projects() {
         <ProjectSelectorWrapper>
           <Dropdown
             items={[
-              "this",
-              "is",
-              "a",
-              "test",
-              "this",
-              "is",
-              "a",
-              "showdown",
-              "a",
-              "throwdown",
+              { label: "test", value: "lol" },
+              { label: "test", value: "lol" },
             ]}
           />
           {/* TODO - this could easily just be absorbed by the dropdown */}

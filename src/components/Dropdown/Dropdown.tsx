@@ -4,8 +4,8 @@ import type { DropdownProps } from "./types";
 export const Dropdown = ({ items }: DropdownProps) => {
   return (
     <DropdownContainer>
-      {items.map((item, index) => (
-        <Item key={index}>{item}</Item>
+      {items.map((item) => (
+        <Item key={item.value} />
       ))}
     </DropdownContainer>
   );
