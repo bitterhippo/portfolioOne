@@ -1,11 +1,20 @@
-import { DropdownContainer, Item } from "./styles";
+import { DropdownContainer } from "./styles";
+import { DropdownItem } from "./DropdownItem";
 import type { DropdownProps } from "./types";
 
-export const Dropdown = ({ items }: DropdownProps) => {
+export const Dropdown = ({
+  items,
+  setSelectedDropdownItemHandler,
+}: DropdownProps) => {
   return (
     <DropdownContainer>
       {items.map((item) => (
-        <Item key={item.value} />
+        <DropdownItem
+          key={item.value}
+          label={item.label}
+          value={item.value}
+          setSelectedDropdownItemHandler={setSelectedDropdownItemHandler}
+        />
       ))}
     </DropdownContainer>
   );

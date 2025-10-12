@@ -1,10 +1,15 @@
-//TODO update type of items
+export type SetSelectedHandler<T = string> = (value: T) => void;
 
-export type DropdownItemProps = {
+export type DropdownItemData<T = string> = {
   label: string;
-  value: string | number;
+  value: T;
 };
 
-export interface DropdownProps {
-  items: DropdownItemProps[];
+export interface DropdownItemProps<T = string> extends DropdownItemData<T> {
+  setSelectedDropdownItemHandler: SetSelectedHandler<T>;
+}
+
+export interface DropdownProps<T = string> {
+  items: DropdownItemData[];
+  setSelectedDropdownItemHandler: SetSelectedHandler<T>;
 }

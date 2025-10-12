@@ -10,8 +10,11 @@ import {
   ProjectSelectorContentBox,
 } from "../styles";
 import { CommitList, Dropdown } from "../../components";
+import { ProjectData } from "../../data/ProjectsData";
+import { useState } from "react";
 
 export default function Projects() {
+  const [selectedDropdownItem, setSelectedDropdownItem] = useState<string>("");
   return (
     <PageContentWrapper>
       <Banner image={Daigoro2}>
@@ -27,10 +30,8 @@ export default function Projects() {
         </StyledBody>
         <ProjectSelectorWrapper>
           <Dropdown
-            items={[
-              { label: "test", value: "lol" },
-              { label: "test", value: "lol" },
-            ]}
+            items={[...ProjectData]}
+            setSelectedDropdownItemHandler={setSelectedDropdownItem}
           />
           {/* TODO - this could easily just be absorbed by the dropdown */}
           <ProjectSelectorContentBox />

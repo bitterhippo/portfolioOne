@@ -64,7 +64,7 @@ export const StyledH2 = styled.h2`
 
 export const StyledBody = styled.p`
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
+  font-size: ${theme.fontSizes.sm};
   font-weight: 400;
   line-height: 1.5;
   color: #050517;
