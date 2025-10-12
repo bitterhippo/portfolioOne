@@ -5,7 +5,7 @@ export const theme = {
     secondary: "#EFC88B",
     light: "#F4E3B2",
     gray: "#D3D5D7",
-    textPrimary: "##050517",
+    textPrimary: "#050517",
     textSecondary: "#D3D5D7",
     link: "#CF5C36",
     linkHover: "#C04828",

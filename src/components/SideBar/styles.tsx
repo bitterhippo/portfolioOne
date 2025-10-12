@@ -35,9 +35,9 @@ export const StyledLink = styled(Link)`
   border-radius: ${theme.borderRadius.sm};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.textPrimary};
+    color: ${({ theme }) => theme.colors.secondary};
     text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.colors.textPrimary};
+    text-decoration-color: ${({ theme }) => theme.colors.secondary};
     text-underline-offset: 3px;
   }
 `;
