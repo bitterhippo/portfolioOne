@@ -15,7 +15,6 @@ import { useState } from "react";
 
 export default function Projects() {
   const [selectedDropdownItem, setSelectedDropdownItem] = useState<string>("");
-  console.log(selectedDropdownItem);
   return (
     <PageContentWrapper>
       <Banner image={Daigoro2}>
@@ -34,8 +33,7 @@ export default function Projects() {
             items={[...ProjectData]}
             setSelectedDropdownItemHandler={setSelectedDropdownItem}
           />
-          {/* TODO - this could easily just be absorbed by the dropdown */}
-          <ProjectSelectorContentBox />
+          <ProjectSelectorContentBox>test</ProjectSelectorContentBox>
         </ProjectSelectorWrapper>
       </PageTextWrapper>
     </PageContentWrapper>

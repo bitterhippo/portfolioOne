@@ -80,6 +80,8 @@ export const ProjectSelectorContentBox = styled.div`
   width: 100%;
   min-height: 200px;
   max-height: 400px;
+  font-family: "Roboto", sans-serif;
+  color: ${theme.colors.textPrimary};
   border: 1px solid #ccc;
   border-radius: 4px;
   background: #fff;
