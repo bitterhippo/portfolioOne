@@ -15,6 +15,7 @@ import { useState } from "react";
 
 export default function Projects() {
   const [selectedDropdownItem, setSelectedDropdownItem] = useState<string>("");
+  console.log(selectedDropdownItem);
   return (
     <PageContentWrapper>
       <Banner image={Daigoro2}>
