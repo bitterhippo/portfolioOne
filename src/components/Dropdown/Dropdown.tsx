@@ -2,10 +2,7 @@ import { DropdownContainer } from "./styles";
 import { DropdownItem } from "./DropdownItem";
 import type { DropdownProps } from "./types";
 
-export function Dropdown({
-  items,
-  setSelectedDropdownItemHandler,
-}: DropdownProps) {
+export function Dropdown({ items }: DropdownProps) {
   return (
     <DropdownContainer>
       {items.map((item) => (
@@ -13,7 +10,6 @@ export function Dropdown({
           key={String(item.value)}
           label={item.label}
           value={item.value}
-          setSelectedDropdownItemHandler={setSelectedDropdownItemHandler}
         />
       ))}
     </DropdownContainer>

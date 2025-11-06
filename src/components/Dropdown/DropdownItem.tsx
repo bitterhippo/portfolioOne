@@ -1,13 +1,12 @@
 import type { DropdownItemProps } from "./types";
 import { Item } from "./styles";
+import { useSelectedProject } from "./useSelectedProject";
 
-export const DropdownItem = ({
-  label,
-  value,
-  setSelectedDropdownItemHandler,
-}: DropdownItemProps) => {
+export const DropdownItem = ({ label, value }: DropdownItemProps) => {
+  //TODO implement highlighting based on selected item
+  const { selected, setSelected } = useSelectedProject();
   return (
-    <Item tabIndex={0} onClick={() => setSelectedDropdownItemHandler(value)}>
+    <Item tabIndex={0} onClick={() => setSelected(value)}>
       {label}
     </Item>
   );

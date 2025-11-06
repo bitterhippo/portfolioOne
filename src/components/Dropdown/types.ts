@@ -5,11 +5,8 @@ export type DropdownItemData = {
   value: ProjectKey;
 };
 
-export interface DropdownItemProps extends DropdownItemData {
-  setSelectedDropdownItemHandler: (value: ProjectKey) => void;
-}
+export interface DropdownItemProps extends DropdownItemData {}
 
 export interface DropdownProps {
   items: DropdownItemData[];
-  setSelectedDropdownItemHandler: (value: ProjectKey) => void;
 }

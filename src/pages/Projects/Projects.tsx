@@ -9,39 +9,37 @@ import {
   ProjectSelectorWrapper,
   ProjectSelectorContentBox,
 } from "../styles";
+import {
+  SelectedProjectProvider,
+  useSelectedProject,
+} from "../../components/Dropdown/useSelectedProject";
 import { CommitList, Dropdown } from "../../components";
 import { ProjectData, ProjectDescriptions } from "../../data/ProjectsData";
-import { useState } from "react";
-import type { ProjectKey } from "../../data/ProjectsData";
 
 export default function Projects() {
-  const [selectedDropdownItem, setSelectedDropdownItem] =
-    useState<ProjectKey | null>("1");
-  //TODO remove this
-
+  const { selected } = useSelectedProject();
   return (
-    <PageContentWrapper>
-      <Banner image={Daigoro2}>
-        <span>Projects</span>
-      </Banner>
-      <PageTextWrapper>
-        <StyledH1>Recent Activity</StyledH1>
-        <CommitList />
-        <StyledH2>Projects</StyledH2>
-        <StyledBody>
-          Select a project from the dropdown below and information relating to
-          that project will be displayed.
-        </StyledBody>
-        <ProjectSelectorWrapper>
-          <Dropdown
-            items={ProjectData} // type: DropdownItemData<ProjectKey>[]
-            setSelectedDropdownItemHandler={setSelectedDropdownItem} // type: (value: ProjectKey | null) => void
-          />
-          <ProjectSelectorContentBox>
-            {selectedDropdownItem && ProjectDescriptions[selectedDropdownItem]}
-          </ProjectSelectorContentBox>
-        </ProjectSelectorWrapper>
-      </PageTextWrapper>
-    </PageContentWrapper>
+    <SelectedProjectProvider>
+      <PageContentWrapper>
+        <Banner image={Daigoro2}>
+          <span>Projects</span>
+        </Banner>
+        <PageTextWrapper>
+          <StyledH1>Recent Activity</StyledH1>
+          <CommitList />
+          <StyledH2>Projects</StyledH2>
+          <StyledBody>
+            Select a project from the dropdown below and information relating to
+            that project will be displayed.
+          </StyledBody>
+          <ProjectSelectorWrapper>
+            <Dropdown items={ProjectData} />
+            <ProjectSelectorContentBox>
+              {selected && ProjectDescriptions[selected]}
+            </ProjectSelectorContentBox>
+          </ProjectSelectorWrapper>
+        </PageTextWrapper>
+      </PageContentWrapper>
+    </SelectedProjectProvider>
   );
 }
