@@ -2,15 +2,15 @@ import { DropdownContainer } from "./styles";
 import { DropdownItem } from "./DropdownItem";
 import type { DropdownProps } from "./types";
 
-export const Dropdown = ({
+export function Dropdown({
   items,
   setSelectedDropdownItemHandler,
-}: DropdownProps) => {
+}: DropdownProps) {
   return (
     <DropdownContainer>
       {items.map((item) => (
         <DropdownItem
-          key={item.value}
+          key={String(item.value)}
           label={item.label}
           value={item.value}
           setSelectedDropdownItemHandler={setSelectedDropdownItemHandler}
@@ -18,4 +18,4 @@ export const Dropdown = ({
       ))}
     </DropdownContainer>
   );
-};
+}

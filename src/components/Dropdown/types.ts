@@ -1,15 +1,15 @@
-export type SetSelectedHandler<T = string> = (value: T) => void;
+type ProjectKey = "1" | "2" | "3";
 
-export type DropdownItemData<T = string> = {
+export type DropdownItemData = {
   label: string;
-  value: T;
+  value: ProjectKey;
 };
 
-export interface DropdownItemProps<T = string> extends DropdownItemData<T> {
-  setSelectedDropdownItemHandler: SetSelectedHandler<T>;
+export interface DropdownItemProps extends DropdownItemData {
+  setSelectedDropdownItemHandler: (value: ProjectKey) => void;
 }
 
-export interface DropdownProps<T = string> {
+export interface DropdownProps {
   items: DropdownItemData[];
-  setSelectedDropdownItemHandler: SetSelectedHandler<T>;
+  setSelectedDropdownItemHandler: (value: ProjectKey) => void;
 }

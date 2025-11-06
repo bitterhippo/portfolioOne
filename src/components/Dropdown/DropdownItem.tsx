@@ -7,6 +7,8 @@ export const DropdownItem = ({
   setSelectedDropdownItemHandler,
 }: DropdownItemProps) => {
   return (
-    <Item onClick={() => setSelectedDropdownItemHandler(value)}>{label}</Item>
+    <Item tabIndex={0} onClick={() => setSelectedDropdownItemHandler(value)}>
+      {label}
+    </Item>
   );
 };

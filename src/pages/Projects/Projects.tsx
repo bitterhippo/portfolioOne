@@ -10,11 +10,15 @@ import {
   ProjectSelectorContentBox,
 } from "../styles";
 import { CommitList, Dropdown } from "../../components";
-import { ProjectData } from "../../data/ProjectsData";
+import { ProjectData, ProjectDescriptions } from "../../data/ProjectsData";
 import { useState } from "react";
+import type { ProjectKey } from "../../data/ProjectsData";
 
 export default function Projects() {
-  const [selectedDropdownItem, setSelectedDropdownItem] = useState<string>("");
+  const [selectedDropdownItem, setSelectedDropdownItem] =
+    useState<ProjectKey | null>(null);
+  //TODO remove this
+
   return (
     <PageContentWrapper>
       <Banner image={Daigoro2}>
@@ -30,10 +34,12 @@ export default function Projects() {
         </StyledBody>
         <ProjectSelectorWrapper>
           <Dropdown
-            items={[...ProjectData]}
-            setSelectedDropdownItemHandler={setSelectedDropdownItem}
+            items={ProjectData} // type: DropdownItemData<ProjectKey>[]
+            setSelectedDropdownItemHandler={setSelectedDropdownItem} // type: (value: ProjectKey | null) => void
           />
-          <ProjectSelectorContentBox>test</ProjectSelectorContentBox>
+          <ProjectSelectorContentBox>
+            {selectedDropdownItem && ProjectDescriptions[selectedDropdownItem]}
+          </ProjectSelectorContentBox>
         </ProjectSelectorWrapper>
       </PageTextWrapper>
     </PageContentWrapper>
