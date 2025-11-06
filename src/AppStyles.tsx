@@ -12,10 +12,12 @@ export const ContentWindow = styled.div<ContentWindowProps>`
     isPrimary ? theme.colors.light : theme.colors.background};
   color: ${({ isPrimary }) => (isPrimary ? "#F4E3B2" : "#050517")};
   transition: flex 0.3s ease;
+  overflow-y: auto;
 `;
 
 export const LayOutContainer = styled.div`
   display: flex;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 `;
