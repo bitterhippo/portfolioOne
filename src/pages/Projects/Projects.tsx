@@ -9,37 +9,32 @@ import {
   ProjectSelectorWrapper,
   ProjectSelectorContentBox,
 } from "../styles";
-import {
-  SelectedProjectProvider,
-  useSelectedProject,
-} from "../../components/Dropdown/useSelectedProject";
+import { useSelectedProject } from "../../components/Dropdown/useSelectedProject";
 import { CommitList, Dropdown } from "../../components";
 import { ProjectData, ProjectDescriptions } from "../../data/ProjectsData";
 
 export default function Projects() {
   const { selected } = useSelectedProject();
   return (
-    <SelectedProjectProvider>
-      <PageContentWrapper>
-        <Banner image={Daigoro2}>
-          <span>Projects</span>
-        </Banner>
-        <PageTextWrapper>
-          <StyledH1>Recent Activity</StyledH1>
-          <CommitList />
-          <StyledH2>Projects</StyledH2>
-          <StyledBody>
-            Select a project from the dropdown below and information relating to
-            that project will be displayed.
-          </StyledBody>
-          <ProjectSelectorWrapper>
-            <Dropdown items={ProjectData} />
-            <ProjectSelectorContentBox>
-              {selected && ProjectDescriptions[selected]}
-            </ProjectSelectorContentBox>
-          </ProjectSelectorWrapper>
-        </PageTextWrapper>
-      </PageContentWrapper>
-    </SelectedProjectProvider>
+    <PageContentWrapper>
+      <Banner image={Daigoro2}>
+        <span>Projects</span>
+      </Banner>
+      <PageTextWrapper>
+        <StyledH1>Recent Activity</StyledH1>
+        <CommitList />
+        <StyledH2>Projects</StyledH2>
+        <StyledBody>
+          Select a project from the dropdown below and information relating to
+          that project will be displayed.
+        </StyledBody>
+        <ProjectSelectorWrapper>
+          <Dropdown items={ProjectData} />
+          <ProjectSelectorContentBox>
+            {selected && ProjectDescriptions[selected]}
+          </ProjectSelectorContentBox>
+        </ProjectSelectorWrapper>
+      </PageTextWrapper>
+    </PageContentWrapper>
   );
 }
