@@ -16,7 +16,7 @@ import type { ProjectKey } from "../../data/ProjectsData";
 
 export default function Projects() {
   const [selectedDropdownItem, setSelectedDropdownItem] =
-    useState<ProjectKey | null>(null);
+    useState<ProjectKey | null>("1");
   //TODO remove this
 
   return (

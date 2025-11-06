@@ -86,6 +86,6 @@ export const ProjectSelectorContentBox = styled.div`
   border-radius: 4px;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  padding: 16px;
+  padding: ${theme.spacing.sm} ${theme.spacing.md};
   overflow-y: auto;
 `;
