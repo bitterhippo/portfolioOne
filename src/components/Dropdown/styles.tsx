@@ -11,13 +11,10 @@ export const DropdownContainer = styled.div`
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 `;
 
-export const Item = styled.div`
+export const Item = styled.div<{ isSelected: Boolean }>`
   padding: ${theme.spacing.sm} ${theme.spacing.md};
   cursor: pointer;
   color: ${theme.colors.textPrimary};
   font-family: "Roboto", sans-serif;
-
-  &:hover {
-    background: #f0f0f0;
-  }
+  background: ${({ isSelected }) => (isSelected ? "#f0f0f0" : "#fff")};
 `;

@@ -6,7 +6,11 @@ export const DropdownItem = ({ label, value }: DropdownItemProps) => {
   //TODO implement highlighting based on selected item
   const { selected, setSelected } = useSelectedProject();
   return (
-    <Item tabIndex={0} onClick={() => setSelected(value)}>
+    <Item
+      isSelected={value === selected}
+      tabIndex={0}
+      onClick={() => setSelected(value)}
+    >
       {label}
     </Item>
   );
