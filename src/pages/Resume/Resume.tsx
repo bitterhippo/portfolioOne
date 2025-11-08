@@ -8,6 +8,14 @@ export default function Resume() {
         <span>Resume</span>
       </Banner>
       <PageTextWrapper>Resume</PageTextWrapper>
+      {/* <a href="/resume.pdf" download="Noah-Eror-Resume.pdf">
+        PDF
+
+        TO DO figure out what file doesn't work
+      </a>
+      <a href="/resume.docx" download="Noah-Eror-Resume.pdf">
+        Micsoft Word
+      </a> */}
     </PageContentWrapper>
   );
 }

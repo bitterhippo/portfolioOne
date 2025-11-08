@@ -21,7 +21,7 @@ export const SidebarContainer = styled.nav<SidebarContainerProps>`
   border-right: 2px solid ${theme.colors.background};
   align-items: center;
   justify-content: center;
-  gap: ${theme.spacing.md};
+  gap: 60px;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
 `;
 
@@ -35,9 +35,9 @@ export const StyledLink = styled(Link)`
   border-radius: ${theme.borderRadius.sm};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.textSecondary};
     text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.colors.secondary};
+    text-decoration-color: ${({ theme }) => theme.colors.textSecondary};
     text-underline-offset: 3px;
   }
 `;
