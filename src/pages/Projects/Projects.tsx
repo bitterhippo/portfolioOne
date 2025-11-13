@@ -1,4 +1,5 @@
 import { Daigoro2 } from "../../assets/images";
+import { useState, useEffect } from "react";
 import {
   PageContentWrapper,
   Banner,
@@ -6,15 +7,15 @@ import {
   StyledH1,
   StyledH2,
   StyledBody,
-  ProjectSelectorWrapper,
   ProjectSelectorContentBox,
 } from "../styles";
-import { useSelectedProject } from "../../components/Dropdown/useSelectedProject";
 import { CommitList, Dropdown } from "../../components";
 import { ProjectData, ProjectDescriptions } from "../../data/ProjectsData";
 
 export default function Projects() {
-  const { selected } = useSelectedProject();
+  const [selectedProject, setSelectedProject] = useState("");
+  const DropdownChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
+    setSelectedProject(e.target.value);
   return (
     <PageContentWrapper>
       <Banner image={Daigoro2}>
@@ -28,9 +29,13 @@ export default function Projects() {
           Select a project from the dropdown below and information relating to
           that project will be displayed.
         </StyledBody>
-        {/* <Dropdown items={ProjectData} /> */}
+        <select value={selectedProject} onChange={DropdownChangeHandler}>
+          {ProjectData.map((item) => {
+            return <option value={item.value}>{item.label}</option>;
+          })}
+        </select>
         <ProjectSelectorContentBox>
-          {selected && ProjectDescriptions[selected]}
+          {/* {selected && ProjectDescriptions[selected]} */}
         </ProjectSelectorContentBox>
       </PageTextWrapper>
     </PageContentWrapper>

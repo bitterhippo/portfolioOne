@@ -70,12 +70,6 @@ export const StyledBody = styled.p`
   color: #050517;
 `;
 
-export const ProjectSelectorWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: ${theme.spacing.lg};
-`;
-
 export const ProjectSelectorContentBox = styled.div`
   width: 100%;
   min-height: 200px;
