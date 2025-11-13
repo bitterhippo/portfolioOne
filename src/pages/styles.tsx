@@ -43,7 +43,10 @@ export const Banner = styled.div<{ image: string }>`
 `;
 
 export const PageTextWrapper = styled.div`
-  margin: ${theme.spacing.lg} calc(2 * ${theme.spacing.lg});
+  display: flex;
+  flex-direction: column;
+  margin: 0px calc(2 * ${theme.spacing.lg});
+  gap: ${theme.spacing.sm};
 `;
 
 export const StyledH1 = styled.h1`

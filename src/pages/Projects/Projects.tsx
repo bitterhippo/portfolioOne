@@ -29,7 +29,11 @@ export default function Projects() {
           Select a project from the dropdown below and information relating to
           that project will be displayed.
         </StyledBody>
-        <select value={selectedProject} onChange={DropdownChangeHandler}>
+        <select
+          style={{ width: "100px" }}
+          value={selectedProject}
+          onChange={DropdownChangeHandler}
+        >
           {ProjectData.map((item) => {
             return <option value={item.value}>{item.label}</option>;
           })}
