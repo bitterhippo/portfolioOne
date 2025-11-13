@@ -7,8 +7,19 @@ interface SidebarContainerProps {
   isMobile: boolean;
 }
 
-export const SidebarContainer = styled.nav<SidebarContainerProps>`
+export const SideBarWrapper = styled.nav`
   position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: ${theme.colors.primary};
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
+`;
+
+export const SidebarContainer = styled.div<SidebarContainerProps>`
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -22,7 +33,23 @@ export const SidebarContainer = styled.nav<SidebarContainerProps>`
   align-items: center;
   justify-content: center;
   gap: 60px;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
+`;
+
+export const SocialIconsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+
+  a {
+    color: ${theme.colors.background};
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
+  }
 `;
 
 export const StyledLink = styled(Link)`

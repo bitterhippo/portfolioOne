@@ -28,12 +28,10 @@ export default function Projects() {
           Select a project from the dropdown below and information relating to
           that project will be displayed.
         </StyledBody>
-        <ProjectSelectorWrapper>
-          <Dropdown items={ProjectData} />
-          <ProjectSelectorContentBox>
-            {selected && ProjectDescriptions[selected]}
-          </ProjectSelectorContentBox>
-        </ProjectSelectorWrapper>
+        {/* <Dropdown items={ProjectData} /> */}
+        <ProjectSelectorContentBox>
+          {selected && ProjectDescriptions[selected]}
+        </ProjectSelectorContentBox>
       </PageTextWrapper>
     </PageContentWrapper>
   );
