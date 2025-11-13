@@ -46,23 +46,25 @@ export const PageTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0px calc(2 * ${theme.spacing.lg});
-  gap: ${theme.spacing.sm};
+  gap: ${theme.spacing.md};
 `;
 
-export const StyledH1 = styled.h1`
+const HeadingDefaults = styled.h1<{ size?: string }>`
   font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #050517;
+`;
+
+export const StyledH1 = styled(HeadingDefaults)`
   font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
-  color: #050517;
 `;
 
-export const StyledH2 = styled.h2`
-  font-family: "Inter", sans-serif;
+export const StyledH2 = styled(HeadingDefaults)`
   font-size: 18px;
   font-weight: 600;
   line-height: 1.3;
-  color: #050517;
 `;
 
 export const StyledBody = styled.p`
@@ -74,6 +76,7 @@ export const StyledBody = styled.p`
 `;
 
 export const ProjectSelectorContentBox = styled.div`
+  box-sizing: border-box;
   width: 100%;
   min-height: 200px;
   max-height: 400px;
