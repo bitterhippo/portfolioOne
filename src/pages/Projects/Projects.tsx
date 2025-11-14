@@ -1,4 +1,4 @@
-import { Daigoro2 } from "../../assets/images";
+import { Daigoro2, DaigoroTile } from "../../assets/images";
 import { useState, useEffect } from "react";
 import {
   PageContentWrapper,
@@ -19,7 +19,7 @@ export default function Projects() {
     setSelectedProject(e.target.value as ProjectKey | "");
   return (
     <PageContentWrapper>
-      <Banner image={Daigoro2}>
+      <Banner image={DaigoroTile}>
         <span>Projects</span>
       </Banner>
       <PageTextWrapper>
