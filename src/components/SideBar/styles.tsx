@@ -17,22 +17,21 @@ export const SideBarWrapper = styled.nav`
   justify-content: space-between;
   background-color: ${theme.colors.primary};
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
+  transition: width 0.3s ease;
 `;
 
 export const SidebarContainer = styled.div<SidebarContainerProps>`
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-width: ${({ isOpen }) => (isOpen ? "200px" : "80px")};
-  max-width: ${({ isOpen }) => (isOpen ? "200px" : "80px")};
   width: ${({ isOpen }) => (isOpen ? "250px" : "80px")};
   background-color: ${theme.colors.primary};
   color: ${theme.colors.background};
-  transition: width 0.3s ease;
   border-right: 2px solid ${theme.colors.background};
   align-items: center;
   justify-content: center;
   gap: 30px;
+  transition: width 0.3s ease;
 `;
 
 export const SocialIconsContainer = styled.div`

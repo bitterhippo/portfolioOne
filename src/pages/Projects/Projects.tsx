@@ -14,7 +14,7 @@ import { ProjectData, ProjectDescriptions } from "../../data/ProjectsData";
 import type { ProjectKey } from "../../data/ProjectsData";
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<ProjectKey | "">("");
+  const [selectedProject, setSelectedProject] = useState<ProjectKey | "">("1");
   const DropdownChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
     setSelectedProject(e.target.value as ProjectKey | "");
   return (
@@ -26,7 +26,7 @@ export default function Projects() {
         <StyledH1>Recent Activity</StyledH1>
         <CommitList />
         <StyledH2>Projects</StyledH2>
-        <StyledBody>
+        <StyledBody as="label" htmlFor="project-select">
           Select a project from the dropdown below and information relating to
           that project will be displayed.
         </StyledBody>
