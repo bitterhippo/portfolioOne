@@ -9,13 +9,14 @@ import {
   StyledBody,
   ProjectSelectorContentBox,
 } from "../styles";
-import { CommitList, Dropdown } from "../../components";
+import { CommitList } from "../../components";
 import { ProjectData, ProjectDescriptions } from "../../data/ProjectsData";
+import type { ProjectKey } from "../../data/ProjectsData";
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState("");
+  const [selectedProject, setSelectedProject] = useState<ProjectKey | "">("");
   const DropdownChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    setSelectedProject(e.target.value);
+    setSelectedProject(e.target.value as ProjectKey | "");
   return (
     <PageContentWrapper>
       <Banner image={Daigoro2}>
@@ -39,7 +40,7 @@ export default function Projects() {
           })}
         </select>
         <ProjectSelectorContentBox>
-          {/* {selected && ProjectDescriptions[selected]} */}
+          {selectedProject !== "" && ProjectDescriptions[`${selectedProject}`]}
         </ProjectSelectorContentBox>
       </PageTextWrapper>
     </PageContentWrapper>

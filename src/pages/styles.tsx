@@ -46,12 +46,12 @@ export const PageTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0px calc(2 * ${theme.spacing.lg});
-  gap: ${theme.spacing.md};
+  gap: ${theme.spacing.xs};
 `;
 
 const HeadingDefaults = styled.h1<{ size?: string }>`
   font-family: "Inter", sans-serif;
-  margin: 0;
+  margin: ${theme.spacing.lg} 0px 0px 0px;
   color: #050517;
 `;
 

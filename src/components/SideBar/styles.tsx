@@ -32,7 +32,7 @@ export const SidebarContainer = styled.div<SidebarContainerProps>`
   border-right: 2px solid ${theme.colors.background};
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 30px;
 `;
 
 export const SocialIconsContainer = styled.div`
@@ -47,7 +47,7 @@ export const SocialIconsContainer = styled.div`
     transition: color 0.2s ease;
 
     &:hover {
-      color: ${theme.colors.secondary};
+      color: #fff;
     }
   }
 `;
@@ -62,7 +62,7 @@ export const StyledLink = styled(Link)`
   border-radius: ${theme.borderRadius.sm};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.textSecondary};
+    color: #fff;
     text-decoration: underline;
     text-decoration-color: ${({ theme }) => theme.colors.textSecondary};
     text-underline-offset: 3px;
