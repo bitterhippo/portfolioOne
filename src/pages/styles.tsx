@@ -75,11 +75,15 @@ export const StyledBody = styled.p`
   color: #050517;
 `;
 
-export const ProjectSelectorContentBox = styled.div`
+export const ProjectSelectorContentBox = styled.div<{
+  height?: string;
+}>`
   box-sizing: border-box;
   width: 100%;
-  min-height: 200px;
-  max-height: 400px;
+  height: ${({ height }) => height || "auto"};
+  min-height: ${({ height }) => (height ? "unset" : "200px")};
+  max-height: ${({ height }) => (height ? "unset" : "400px")};
+
   font-family: "Roboto", sans-serif;
   color: ${theme.colors.textPrimary};
   border: 1px solid #ccc;

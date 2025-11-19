@@ -1,4 +1,4 @@
-import { Daigoro2, DaigoroTile } from "../../assets/images";
+import { DaigoroTile } from "../../assets/images";
 import { useState, useEffect } from "react";
 import {
   PageContentWrapper,
