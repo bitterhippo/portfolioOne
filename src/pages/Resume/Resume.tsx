@@ -26,7 +26,7 @@ export default function Resume() {
           </a>{" "}
           format.
         </span>
-        <ProjectSelectorContentBox height="100%">
+        <ProjectSelectorContentBox height="60vh">
           <embed
             src="/files/resume.pdf"
             type="application/pdf"
