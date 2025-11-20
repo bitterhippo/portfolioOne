@@ -3,11 +3,12 @@ import { theme } from "../Theme";
 import { Link } from "react-router-dom";
 
 interface SidebarContainerProps {
-  isOpen: boolean;
   isMobile: boolean;
 }
 
-export const SideBarWrapper = styled.nav`
+export const SideBarWrapper = styled.nav<{ isOpen: boolean }>`
+  width: ${({ isOpen }) => (isOpen ? "250px" : "80px")};
+  transition: width 0.3s ease;
   position: relative;
   top: 0;
   left: 0;
@@ -24,7 +25,6 @@ export const SideBarWrapper = styled.nav`
 export const SidebarContainer = styled.div<SidebarContainerProps>`
   display: flex;
   flex-direction: column;
-  width: ${({ isOpen }) => (isOpen ? "250px" : "80px")};
   align-items: center;
   gap: 30px;
   margin-top: 50vh;

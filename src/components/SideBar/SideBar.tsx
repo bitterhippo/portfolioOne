@@ -11,8 +11,8 @@ import { LinkIcon } from "../LinkIcon/LinkIcon";
 
 export const SideBar = ({ isMobile, isOpen, sideBarHandler }: SideBarProps) => {
   return (
-    <SideBarWrapper>
-      <SidebarContainer isMobile={isMobile} isOpen={isOpen}>
+    <SideBarWrapper isOpen={isOpen}>
+      <SidebarContainer isMobile={isMobile}>
         <ToggleButton
           isSideBarExpanded={true}
           sideBarHandler={sideBarHandler}
