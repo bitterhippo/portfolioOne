@@ -11,27 +11,24 @@ export const SideBarWrapper = styled.nav`
   position: relative;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: ${theme.colors.primary};
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
-  transition: width 0.3s ease;
   border-right: 2px solid ${theme.colors.background};
+  transition: width 0.3s ease;
 `;
 
 export const SidebarContainer = styled.div<SidebarContainerProps>`
   display: flex;
   flex-direction: column;
-  height: 100vh;
   width: ${({ isOpen }) => (isOpen ? "250px" : "80px")};
-  background-color: ${theme.colors.primary};
-  color: ${theme.colors.background};
   align-items: center;
-  justify-content: center;
   gap: 30px;
-  transition: width 0.3s ease;
+  margin-top: 50vh;
+  transform: translateY(-50%);
 `;
 
 export const SocialIconsContainer = styled.div`
@@ -39,7 +36,7 @@ export const SocialIconsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 
   a {
     color: ${theme.colors.background};
