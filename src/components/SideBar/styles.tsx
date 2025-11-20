@@ -18,6 +18,7 @@ export const SideBarWrapper = styled.nav`
   background-color: ${theme.colors.primary};
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
   transition: width 0.3s ease;
+  border-right: 2px solid ${theme.colors.background};
 `;
 
 export const SidebarContainer = styled.div<SidebarContainerProps>`
@@ -27,7 +28,6 @@ export const SidebarContainer = styled.div<SidebarContainerProps>`
   width: ${({ isOpen }) => (isOpen ? "250px" : "80px")};
   background-color: ${theme.colors.primary};
   color: ${theme.colors.background};
-  border-right: 2px solid ${theme.colors.background};
   align-items: center;
   justify-content: center;
   gap: 30px;
@@ -38,6 +38,8 @@ export const SocialIconsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
+  margin-bottom: 10vh;
 
   a {
     color: ${theme.colors.background};
