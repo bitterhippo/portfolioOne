@@ -39,7 +39,7 @@ export default function Projects() {
             return <option value={item.value}>{item.label}</option>;
           })}
         </select>
-        <ProjectSelectorContentBox>
+        <ProjectSelectorContentBox height="30vh">
           {selectedProject !== "" && ProjectDescriptions[`${selectedProject}`]}
         </ProjectSelectorContentBox>
       </PageTextWrapper>
