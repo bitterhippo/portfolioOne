@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import { theme } from "./components/Theme";
 
 interface ContentWindowProps {
   isPrimary: boolean;

@@ -23,7 +23,7 @@ export const SideBarWrapper = styled.nav`
 export const SidebarContainer = styled.div<SidebarContainerProps>`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   width: ${({ isOpen }) => (isOpen ? "250px" : "80px")};
   background-color: ${theme.colors.primary};
   color: ${theme.colors.background};
@@ -38,8 +38,6 @@ export const SocialIconsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
-  gap: 12px;
 
   a {
     color: ${theme.colors.background};
