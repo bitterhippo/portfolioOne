@@ -1,5 +1,5 @@
 import { DaigoroTile } from "../../assets/images";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   PageContentWrapper,
   Banner,
