@@ -3,7 +3,7 @@ import type { ButtonProps } from "./types";
 
 export const Button = ({ color }: ButtonProps) => {
   return (
-    <StyledButton color={"gray"}>
+    <StyledButton color={color}>
       <>lol</>
     </StyledButton>
   );

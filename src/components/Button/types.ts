@@ -1,5 +1,5 @@
 export interface ButtonProps {
-  color: string;
+  color: ThemeColors;
 }
 
 export type ThemeColors =
